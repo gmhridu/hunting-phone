@@ -1,6 +1,13 @@
-const loadPhone = async () => {
+const loadDefaultPhones = async () => {
+  const response = await fetch('https://openapi.programming-hero.com/api/phones?search=iphone');
+  const defaultData = await response.json();
+  const defaultPhones = defaultData.data;
+  displayPhones(defaultPhones);
+}
+
+const loadPhone = async (searchText) => {
   const res = await fetch(
-    "https://openapi.programming-hero.com/api/phones?search=iphone"
+    `https://openapi.programming-hero.com/api/phones?search=${searchText}`
   );
   const data = await res.json();
   const phones = data.data;
@@ -9,13 +16,13 @@ const loadPhone = async () => {
 };
 
 const displayPhones = (phones) => {
-  // console.log(phones);
-
   // 1. get the container by id
   const phoneContainer = document.getElementById("phones-container");
+  phoneContainer.innerHTML = "";
+  // console.log(phones);
 
   phones.forEach((phone) => {
-    console.log(phone);
+    // console.log(phone);
     // 2. create a div
     const phoneCard = document.createElement("div");
     phoneCard.classList = `card xs:w-[23rem] md:w-96 bg-white shadow-xl p-4 border border-[#CFCFCF] space-y-2`;
@@ -61,4 +68,19 @@ const displayPhones = (phones) => {
   });
 };
 
-loadPhone();
+// handle search button
+const handleSearch = () => {
+  const searchField = document.getElementById("search-field");
+  const searchText = searchField.value;
+  // console.log(searchText);
+  loadPhone(searchText);
+};
+
+
+
+const searchBtn = document.getElementById("handle-search-btn");
+searchBtn.addEventListener("click", handleSearch);
+
+loadDefaultPhones();
+
+// loadPhone();

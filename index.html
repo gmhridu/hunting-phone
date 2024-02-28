@@ -94,7 +94,8 @@
     </header>
     <main class="container mx-auto">
       <!-- search phones -->
-      <div>
+      <section>
+        <div>
         <h2
           class="poppins-fonts text-center xs:text-2xl md:text-4xl font-semibold xs:mt-28 md:mt-[26rem]"
         >
@@ -105,8 +106,8 @@
         class="flex xs:flex-col xs:gap-3 md:flex-row md:gap-0 items-center justify-center my-8"
       >
         <div class="flex relative">
-          <label for="">
-            <input
+          <label for="searchInput">
+            <input id="search-field"
               type="text"
               class="p-3 bg-[#100F0F0D] md:w-full md:max-w-[47rem] rounded-lg"
               placeholder="Search your phone"
@@ -130,16 +131,17 @@
           </label>
         </div>
         <div>
-          <button
+          <button id="handle-search-btn"
             class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold"
           >
             Search
           </button>
         </div>
       </div>
+      </section>
 
       <!-- card section -->
-      <section class="container mx-auto mb-20 mt-12">
+      <section class="container mx-auto md:mx-14 mb-20 mt-12">
        <div id="phones-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
        </div>
       </section>
