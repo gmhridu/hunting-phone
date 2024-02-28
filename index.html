@@ -13,32 +13,131 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <style>
-      .poppins-fonts{
+      .poppins-fonts {
         font-family: "Poppins", sans-serif;
-      };
-      .open-fonts{
+      }
+      .open-fonts {
         font-family: "Open Sans", sans-serif;
-      };
+      }
+      .relative {
+        position: relative;
+      }
+
+      input[type="text"] {
+        padding-left: 2.5rem;
+        width: 300px;
+      }
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     </style>
   </head>
-  <body class="container mx-auto">
+  <body>
     <header>
       <!-- navbar -->
-      <section class="bg-[#0D6EFD0D]">
-        <div>
-          <div class="navbar bg-base-100">
-            <div class="navbar-start">
-             
-              <a class="btn btn-ghost poppins-fonts text-2xl font-bold">Hot Gadgets</a>
+      <section class="bg-[#0D6EFD0D] xs:pb-20 md:pb-36 relative z-0">
+        <div class="container mx-auto">
+          <div>
+            <div class="navbar bg-base-100">
+              <div class="navbar-start mt-3">
+                <a class="btn btn-ghost poppins-fonts text-2xl font-bold"
+                  >Hot Gadgets</a
+                >
+              </div>
+              <div class="navbar-end mt-3">
+                <a
+                  class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold"
+                  >Sign Up</a
+                >
+              </div>
             </div>
-            <div class="navbar-end">
-              <a class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold ">Sign Up</a>
-            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center my-10 gap-6">
+            <h1
+              class="poppins-fonts text-2xl md:text-6xl font-bold text-[#100F0F]"
+            >
+              Apple Iphone 13 Pro Max
+            </h1>
+            <p
+              class="poppins-fonts text-base md:text-xl font-normal text-[#706F6F] text-center"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority
+              <br />
+              have suffered alteration in some form, by injected humou.
+            </p>
+            <button
+              class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold mb-20"
+            >
+              Buy Now
+            </button>
           </div>
         </div>
       </section>
+      <!-- header container -->
+      <div
+        class="flex items-center justify-center absolute xs:top-[408px] md:top-[330px] lg:top-[319px] lg:right-[422px] md:mb-20 z-auto"
+      >
+        <div>
+          <img src="./images/pngwing3.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/pngwing1.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/pngwing2.png" alt="" />
+        </div>
+      </div>
     </header>
-    <main></main>
+    <main class="container mx-auto">
+      <!-- search phones -->
+      <div>
+        <h2
+          class="poppins-fonts text-center xs:text-2xl md:text-4xl font-semibold xs:mt-28 md:mt-[26rem]"
+        >
+          Search your phone
+        </h2>
+      </div>
+      <div
+        class="flex xs:flex-col xs:gap-3 md:flex-row md:gap-0 items-center justify-center my-8"
+      >
+        <div class="flex relative">
+          <label for="">
+            <input
+              type="text"
+              class="p-3 bg-[#100F0F0D] md:w-full md:max-w-[47rem] rounded-lg"
+              placeholder="Search your phone"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="absolute top-[13px] left-[10px] text-gray-400"
+            >
+              <path
+                d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3964 17.9998 12.4887 17.9998 10.4995C17.9998 8.51029 17.2096 6.60256 15.803 5.19599C14.3965 3.78941 12.4887 2.99921 10.4995 2.99921C8.51035 2.99921 6.60262 3.78941 5.19605 5.19599C3.78947 6.60256 2.99927 8.51029 2.99927 10.4995C2.99927 12.4887 3.78947 14.3964 5.19605 15.803C6.60262 17.2096 8.51035 17.9998 10.4995 17.9998C12.4887 17.9998 14.3965 17.2096 15.803 15.803Z"
+                stroke="#706F6F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </label>
+        </div>
+        <div>
+          <button
+            class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </main>
     <footer></footer>
     <script src="./script.js" type="module"></script>
   </body>
