@@ -1,3 +1,10 @@
+const buyBtn = document.getElementById("buy-btn");
+
+buyBtn.addEventListener('click', () => {
+  const selectPhones = document.getElementById("search-field");
+  selectPhones.scrollIntoView({ behavior: "smooth" });
+})
+
 const loadDefaultPhones = async () => {
   const response = await fetch('https://openapi.programming-hero.com/api/phones?search=iphone');
   const defaultData = await response.json();
