@@ -26,7 +26,18 @@ const displayPhones = (phones) => {
   // 1. get the container by id
   const phoneContainer = document.getElementById("phones-container");
   phoneContainer.innerHTML = "";
-  // console.log(phones);
+
+  // display show all buttons if there are more than 12 phones
+  const showAllContainer = document.getElementById('show-all-container');
+  if (phones.length > 12) {
+    showAllContainer.classList.remove('hidden');
+  }
+  else {
+    showAllContainer.classList.add('hidden');
+  }
+  // display only first 12 phones
+  phones = phones.slice(0, 12);
+
 
   phones.forEach((phone) => {
     // console.log(phone);
@@ -73,21 +84,42 @@ const displayPhones = (phones) => {
     // 4. appendChild
     phoneContainer.appendChild(phoneCard);
   });
+  // hide loading spinner
+  toggleLoadingSpinner(false);
 };
 
 // handle search button
 const handleSearch = () => {
+  toggleLoadingSpinner(true);
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
   // console.log(searchText);
   loadPhone(searchText);
 };
 
+const searchFields = document.getElementById("search-field");
+searchFields.addEventListener('keypress', (event) => {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
+});
 
 
 const searchBtn = document.getElementById("handle-search-btn");
 searchBtn.addEventListener("click", handleSearch);
 
+const toggleLoadingSpinner = (isLoading) => {
+  const loadingSpinner = document.getElementById("loading-spinner");
+
+  if (isLoading) {
+    loadingSpinner.classList.remove("hidden");
+  }
+  else {
+    loadingSpinner.classList.add("hidden");
+  }
+
+}
+
 loadDefaultPhones();
 
-// loadPhone();
+

@@ -69,7 +69,8 @@
               <br />
               have suffered alteration in some form, by injected humou.
             </p>
-            <button id="buy-btn"
+            <button
+              id="buy-btn"
               class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold mb-20"
             >
               Buy Now
@@ -96,54 +97,73 @@
       <!-- search phones -->
       <section>
         <div>
-        <h2
-          class="poppins-fonts text-center xs:text-2xl md:text-4xl font-semibold xs:mt-28 md:mt-[26rem]"
-        >
-          Search your phone
-        </h2>
-      </div>
-      <div
-        class="flex xs:flex-col xs:gap-3 md:flex-row md:gap-0 items-center justify-center my-8"
-      >
-        <div class="flex relative">
-          <label for="searchInput">
-            <input id="search-field"
-              type="text"
-              class="p-3 px-6 bg-[#100F0F0D] md:w-full md:max-w-[47rem] rounded-lg"
-              placeholder="Search your phone"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              class="absolute top-[13px] left-[10px] text-gray-400"
-            >
-              <path
-                d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3964 17.9998 12.4887 17.9998 10.4995C17.9998 8.51029 17.2096 6.60256 15.803 5.19599C14.3965 3.78941 12.4887 2.99921 10.4995 2.99921C8.51035 2.99921 6.60262 3.78941 5.19605 5.19599C3.78947 6.60256 2.99927 8.51029 2.99927 10.4995C2.99927 12.4887 3.78947 14.3964 5.19605 15.803C6.60262 17.2096 8.51035 17.9998 10.4995 17.9998C12.4887 17.9998 14.3965 17.2096 15.803 15.803Z"
-                stroke="#706F6F"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </label>
-        </div>
-        <div>
-          <button id="handle-search-btn"
-            class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold"
+          <h2
+            class="poppins-fonts text-center xs:text-2xl md:text-4xl font-semibold xs:mt-28 md:mt-[26rem]"
           >
-            Search
-          </button>
+            Search your phone
+          </h2>
         </div>
-      </div>
+        <div
+          class="flex xs:flex-col xs:gap-3 md:flex-row md:gap-0 items-center justify-center my-8"
+        >
+          <div class="flex relative">
+            <label for="searchInput">
+              <input
+                id="search-field"
+                type="text"
+                class="p-3 px-6 bg-[#100F0F0D] md:w-full md:max-w-[47rem] rounded-lg"
+                placeholder="Search your phone"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="absolute top-[13px] left-[10px] text-gray-400"
+              >
+                <path
+                  d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3964 17.9998 12.4887 17.9998 10.4995C17.9998 8.51029 17.2096 6.60256 15.803 5.19599C14.3965 3.78941 12.4887 2.99921 10.4995 2.99921C8.51035 2.99921 6.60262 3.78941 5.19605 5.19599C3.78947 6.60256 2.99927 8.51029 2.99927 10.4995C2.99927 12.4887 3.78947 14.3964 5.19605 15.803C6.60262 17.2096 8.51035 17.9998 10.4995 17.9998C12.4887 17.9998 14.3965 17.2096 15.803 15.803Z"
+                  stroke="#706F6F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+          </div>
+          <div>
+            <button
+              id="handle-search-btn"
+              class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold"
+            >
+              Search
+            </button>
+          </div>
+        </div>
       </section>
+
+     
+     
 
       <!-- card section -->
       <section class="container mx-auto md:mx-14 mb-20 mt-12">
-       <div id="phones-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-       </div>
+         <!-- spinner or loader -->
+        <div id="loading-spinner" class="flex items-center justify-center text-center min-h-screen hidden">
+           <span class="loading loading-dots loading-lg"></span>
+        </div>
+        <div
+          id="phones-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        ></div>
+        <!-- show all button -->
+        <div id="show-all-container" class="hidden text-center my-10">
+          <button
+            class="btn bg-[#0D6EFD] hover:bg-[#5b97f1] text-white rounded-lg poppins-fonts font-bold text-center"
+          >
+            Show All
+          </button>
+        </div>
       </section>
     </main>
 
